@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[ノビコード.md]]></title>
-  <link href="http://fnobi.github.com/atom.xml" rel="self"/>
+  <title><![CDATA[Category: Node.js | ノビコード.md]]></title>
+  <link href="http://fnobi.github.com/blog/categories/node-js/atom.xml" rel="self"/>
   <link href="http://fnobi.github.com/"/>
   <updated>2013-01-08T02:27:11+09:00</updated>
   <id>http://fnobi.github.com/</id>
@@ -30,48 +30,34 @@
 
 <h2>実験に使ったコード</h2>
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">fs</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;fs&#39;</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="kd">var</span> <span class="nx">filepath</span> <span class="o">=</span> <span class="s1">&#39;message.txt&#39;</span><span class="p">;</span>
-</span><span class='line'>
-</span><span class='line'><span class="c1">// filepathが存在しなくても、watchFileはエラーとか出してくれないので、</span>
-</span><span class='line'><span class="c1">// 先にfs.existsで調べておく</span>
-</span><span class='line'><span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">fs</span><span class="p">.</span><span class="nx">existsSync</span><span class="p">(</span><span class="nx">filepath</span><span class="p">))</span> <span class="p">{</span>
-</span><span class='line'>  <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s1">&#39;%s doesn\&#39;t exist.&#39;</span><span class="p">,</span> <span class="nx">filepath</span><span class="p">);</span>
-</span><span class='line'>  <span class="nx">process</span><span class="p">.</span><span class="nx">exit</span><span class="p">();</span>
-</span><span class='line'><span class="p">}</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;start watch: %s&#39;</span><span class="p">,</span> <span class="nx">filepath</span><span class="p">);</span>
-</span><span class='line'><span class="nx">fs</span><span class="p">.</span><span class="nx">watchFile</span><span class="p">(</span><span class="nx">filepath</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">curr</span><span class="p">,</span> <span class="nx">prev</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>  <span class="c1">// プロパティ丸ごと出力してもらう</span>
-</span><span class='line'>  <span class="nx">console</span><span class="p">.</span><span class="nx">dir</span><span class="p">(</span><span class="nx">curr</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'>  <span class="c1">// 以前のmtimeと比較</span>
-</span><span class='line'>  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;the current mtime is: &#39;</span> <span class="o">+</span> <span class="nx">curr</span><span class="p">.</span><span class="nx">mtime</span><span class="p">);</span>
-</span><span class='line'>  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;the previous mtime was: &#39;</span> <span class="o">+</span> <span class="nx">prev</span><span class="p">.</span><span class="nx">mtime</span><span class="p">);</span>
-</span><span class='line'><span class="p">});</span>
-</span></code></pre></td></tr></table></div></figure>
+<p>```javascript
+var fs = require('fs');</p>
 
+<p>var filepath = 'message.txt';</p>
+
+<p>// filepathが存在しなくても、watchFileはエラーとか出してくれないので、
+// 先にfs.existsで調べておく
+if (!fs.existsSync(filepath)) {</p>
+
+<pre><code>console.error('%s doesn\'t exist.', filepath);
+process.exit();
+</code></pre>
+
+<p>}</p>
+
+<p>console.log('start watch: %s', filepath);
+fs.watchFile(filepath, function (curr, prev) {</p>
+
+<pre><code>// プロパティ丸ごと出力してもらう
+console.dir(curr);
+
+// 以前のmtimeと比較
+console.log('the current mtime is: ' + curr.mtime);
+console.log('the previous mtime was: ' + prev.mtime);
+</code></pre>
+
+<p>});
+```</p>
 
 <h2>分かったこと</h2>
 

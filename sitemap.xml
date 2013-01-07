@@ -2,15 +2,19 @@
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
         <loc>http://fnobi.github.com/blog/2013/01/08/rdfstore-js/</loc>
-        <lastmod>2013-01-08T02:11:54+09:00</lastmod>
+        <lastmod>2013-01-08T02:22:02+09:00</lastmod>
+    </url>
+    <url>
+        <loc>http://fnobi.github.com/blog/2013/01/08/watchfile/</loc>
+        <lastmod>2013-01-08T02:25:02+09:00</lastmod>
     </url>
     <url>
         <loc>http://fnobi.github.com/blog/archives/</loc>
-        <lastmod>2013-01-08T02:11:54+09:00</lastmod>
+        <lastmod>2013-01-08T02:25:02+09:00</lastmod>
     </url>
     <url>
         <loc>http://fnobi.github.com/</loc>
-        <lastmod>2013-01-08T02:11:54+09:00</lastmod>
+        <lastmod>2013-01-08T02:25:02+09:00</lastmod>
     </url>
     <url>
         <loc>http://fnobi.github.com/robots.txt</loc>

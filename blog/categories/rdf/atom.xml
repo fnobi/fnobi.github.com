@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[ノビコード.md]]></title>
-  <link href="http://fnobi.github.com/atom.xml" rel="self"/>
+  <title><![CDATA[Category: rdf | ノビコード.md]]></title>
+  <link href="http://fnobi.github.com/blog/categories/rdf/atom.xml" rel="self"/>
   <link href="http://fnobi.github.com/"/>
   <updated>2013-01-08T02:14:53+09:00</updated>
   <id>http://fnobi.github.com/</id>

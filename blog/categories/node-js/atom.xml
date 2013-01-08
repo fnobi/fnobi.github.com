@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Node.js | ノビコード.md]]></title>
   <link href="http://fnobi.github.com/blog/categories/node-js/atom.xml" rel="self"/>
   <link href="http://fnobi.github.com/"/>
-  <updated>2013-01-08T02:27:11+09:00</updated>
+  <updated>2013-01-08T15:19:00+09:00</updated>
   <id>http://fnobi.github.com/</id>
   <author>
     <name><![CDATA[fnobi]]></name>
@@ -20,8 +20,9 @@
     <id>http://fnobi.github.com/blog/2013/01/08/watchfile</id>
     <content type="html"><![CDATA[<h2>fs.watchfileとは?</h2>
 
-<p>　ファイルの変更を監視して、変化が起きたらcallback関数を呼び出して教えてくれる。node以外では見たことない気がするのは、不勉強かしら。
-　とにかく、そういうファイルの変更を検知するやつを作りたかったので、こまかい動きを調べてメモしました。</p>
+<p>　ファイルの変更を監視して、変化が起きたらcallback関数を呼び出して教えてくれる。node以外では見たことない気がするのは、不勉強かしら。</p>
+
+<p>　とにかく、そういうファイルの変更を検知するやつを作りたかったので、こまかい動きを調べてメモしました。</p>
 
 <ul>
 <li><a href="http://nodejs.org/api/fs.html#fs_fs_watchfile_filename_options_listener">File System Node.js v0.8.16 Manual &amp; Documentation</a></li>
